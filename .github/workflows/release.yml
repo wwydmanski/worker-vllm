@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   release:
-    runs-on: [blacksmith-8vcpu-ubuntu-2204, linux]
+    runs-on: self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -84,4 +84,5 @@ jobs:
           else
             echo "Trigger: GitHub release (tag: ${{ github.ref_name }})"
           fi
+
 
